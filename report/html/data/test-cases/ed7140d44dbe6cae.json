@@ -1,0 +1,246 @@
+{
+  "uid" : "ed7140d44dbe6cae",
+  "name" : "get请求实现登录",
+  "fullName" : "test.test_api.TestApiAuto#test_main",
+  "historyId" : "85d8d71b50041c7b64ff34f9659f11ec",
+  "time" : {
+    "start" : 1617946315406,
+    "stop" : 1617946315478,
+    "duration" : 72
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理相关数据依赖，header",
+      "time" : {
+        "start" : 1617946315407,
+        "stop" : 1617946315408,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "58916ee349abbb5a",
+        "name" : "请求头",
+        "source" : "58916ee349abbb5a.txt",
+        "type" : "text/plain",
+        "size" : 2
+      }, {
+        "uid" : "3a0368a74b33714a",
+        "name" : "请求数据",
+        "source" : "3a0368a74b33714a.txt",
+        "type" : "text/plain",
+        "size" : 47
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "发送请求，取得响应结果的json串",
+      "time" : {
+        "start" : 1617946315408,
+        "stop" : 1617946315475,
+        "duration" : 67
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5f9b49cc6036ad17",
+        "name" : "最终请求地址",
+        "source" : "5f9b49cc6036ad17.txt",
+        "type" : "text/plain",
+        "size" : 49
+      }, {
+        "uid" : "f21a216f170c9c39",
+        "name" : "实际响应",
+        "source" : "f21a216f170c9c39.txt",
+        "type" : "text/plain",
+        "size" : 94
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "将响应结果的内容写入实际响应字典中",
+      "time" : {
+        "start" : 1617946315475,
+        "stop" : 1617946315476,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "50a42f797b2b6e2f",
+        "name" : "实际响应字典",
+        "source" : "50a42f797b2b6e2f.txt",
+        "type" : "text/plain",
+        "size" : 138
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "根据配置文件的提取响应规则提取实际数据",
+      "time" : {
+        "start" : 1617946315476,
+        "stop" : 1617946315477,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "a4283e2df6585b20",
+        "name" : "提取用于断言的实际响应部分数据",
+        "source" : "a4283e2df6585b20.txt",
+        "type" : "text/plain",
+        "size" : 48
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "处理读取出来的预期结果响应",
+      "time" : {
+        "start" : 1617946315477,
+        "stop" : 1617946315477,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b6974dcb1f9051b6",
+        "name" : "预期响应",
+        "source" : "b6974dcb1f9051b6.txt",
+        "type" : "text/plain",
+        "size" : 48
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "预期结果与实际响应进行断言操作",
+      "time" : {
+        "start" : 1617946315477,
+        "stop" : 1617946315478,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b44e7cbdfb61acf8",
+        "name" : "测试结果",
+        "source" : "b44e7cbdfb61acf8.txt",
+        "type" : "text/plain",
+        "size" : 4
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "43cdb03219f0a4b9",
+      "name" : "stderr",
+      "source" : "43cdb03219f0a4b9.txt",
+      "type" : "text/plain",
+      "size" : 2116
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 6
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-UVHS0AF"
+  }, {
+    "name" : "thread",
+    "value" : "10112-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_number",
+    "value" : "'case_001'"
+  }, {
+    "name" : "case_title",
+    "value" : "'get请求实现登录'"
+  }, {
+    "name" : "data",
+    "value" : "'{\"username\": \"admin\", \"password\": \"\"}'"
+  }, {
+    "name" : "dependent",
+    "value" : "''"
+  }, {
+    "name" : "expect",
+    "value" : "'{\n        \"msg\": \"参数错误\",\n        \"status\": 400\n    }'"
+  }, {
+    "name" : "file_path",
+    "value" : "''"
+  }, {
+    "name" : "file_var",
+    "value" : "''"
+  }, {
+    "name" : "is_token",
+    "value" : "''"
+  }, {
+    "name" : "method",
+    "value" : "'get'"
+  }, {
+    "name" : "parameters",
+    "value" : "''"
+  }, {
+    "name" : "parametric_key",
+    "value" : "'params'"
+  }, {
+    "name" : "path",
+    "value" : "'login'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ed7140d44dbe6cae.json",
+  "parameterValues" : [ "'case_001'", "'get请求实现登录'", "'{\"username\": \"admin\", \"password\": \"\"}'", "''", "'{\n        \"msg\": \"参数错误\",\n        \"status\": 400\n    }'", "''", "''", "''", "'get'", "''", "'params'", "'login'" ]
+}

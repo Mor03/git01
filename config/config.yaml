@@ -1,0 +1,33 @@
+server:
+  test: http://127.0.0.1:8888/api/private/v1/
+  # 实例代码使用的接口服务，已改为作者是自己的云服务器部署。（后端源码来自b站：https://www.bilibili.com/video/BV1EE411B7SU?p=10）
+  dev: http://www.ysqorz.top:8888/api/private/v1/   #接口测试中不变的那一串部分地址
+
+# 实际响应jsonpath提取规则设置
+response_reg:
+  # 提取token的jsonpath表达式
+  token: $.data.token
+  # 提取    实际响应的断言数据(设置获取哪些响应数据)   jsonpath表达式，与excel中预期结果的数据进行比对用
+  response: $.meta     # 从响应提取的需要校验的表达式
+
+file_path:
+  case_data: ../data/case_data.xlsx  #测试数据路径
+  report_data: ../report/data/  #报告生成data路径
+  report_generate: ../report/html/  #报告生成可视化allure路径
+  report_zip: ../report/html/apiAutoTestReport.zip  #报告生成压缩类型路径
+  log_path: ../log/运行日志{time}.log #日志路径
+
+email:
+  # 发件人邮箱
+  user:  1430716719@qq.com
+  # 发件人邮箱授权码
+  password:  clthtghqxxuchjbf
+  # 邮箱host
+  host:  smtp.qq.com
+  contents:  解压apiAutoReport.zip(接口测试报告)后，请使用已安装Live Server 插件的VsCode，打开解压目录下的index.html查看报告
+  # 收件人邮箱
+  addressees:  ['liuyuhao1148@163.com']    #["收件人邮箱1","收件人邮箱2","收件人邮箱3"]
+  title:  接口自动化测试报告(见附件)
+  # 附件地址
+  enclosures: ["../接口自动化测试报告.zip"]
+

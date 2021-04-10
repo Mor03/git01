@@ -1,0 +1,7 @@
+{
+    "data": null,
+    "meta": {
+        "msg": "用户ID必须是数字",
+        "status": 400
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "data": {
+        "id": 511,
+        "rid": -1,
+        "username": "tester_01",
+        "mobile": null,
+        "email": null
+    },
+    "meta": {
+        "msg": "获取成功",
+        "status": 200
+    }
+}

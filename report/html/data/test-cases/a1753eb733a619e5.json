@@ -1,0 +1,246 @@
+{
+  "uid" : "a1753eb733a619e5",
+  "name" : "get请求查询用户数据列表",
+  "fullName" : "test.test_api.TestApiAuto#test_main[case_003-get请求查询用户数据列表-users-读-get-params----key={\"case_002\": [\"$.data.id\"],\"case_001\":",
+  "historyId" : "3b323432e32b05885770e0774d99fdf8",
+  "time" : {
+    "start" : 1617946315652,
+    "stop" : 1617946315793,
+    "duration" : 141
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理相关数据依赖，header",
+      "time" : {
+        "start" : 1617946315652,
+        "stop" : 1617946315654,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "502ced1a969557ef",
+        "name" : "请求头",
+        "source" : "502ced1a969557ef.txt",
+        "type" : "text/plain",
+        "size" : 186
+      }, {
+        "uid" : "ad38b7c30862aca4",
+        "name" : "请求数据",
+        "source" : "ad38b7c30862aca4.txt",
+        "type" : "text/plain",
+        "size" : 134
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "发送请求，取得响应结果的json串",
+      "time" : {
+        "start" : 1617946315654,
+        "stop" : 1617946315789,
+        "duration" : 135
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fced19e17df5fc21",
+        "name" : "最终请求地址",
+        "source" : "fced19e17df5fc21.txt",
+        "type" : "text/plain",
+        "size" : 49
+      }, {
+        "uid" : "c80cdea0d8804f4",
+        "name" : "实际响应",
+        "source" : "c80cdea0d8804f4.txt",
+        "type" : "text/plain",
+        "size" : 1913
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "将响应结果的内容写入实际响应字典中",
+      "time" : {
+        "start" : 1617946315789,
+        "stop" : 1617946315790,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "3c15a3cbbec98dbf",
+        "name" : "实际响应字典",
+        "source" : "3c15a3cbbec98dbf.txt",
+        "type" : "text/plain",
+        "size" : 2805
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "根据配置文件的提取响应规则提取实际数据",
+      "time" : {
+        "start" : 1617946315790,
+        "stop" : 1617946315790,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6f1c3f67b543137b",
+        "name" : "提取用于断言的实际响应部分数据",
+        "source" : "6f1c3f67b543137b.txt",
+        "type" : "text/plain",
+        "size" : 63
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "处理读取出来的预期结果响应",
+      "time" : {
+        "start" : 1617946315790,
+        "stop" : 1617946315791,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "337c214c71ad137c",
+        "name" : "预期响应",
+        "source" : "337c214c71ad137c.txt",
+        "type" : "text/plain",
+        "size" : 63
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "预期结果与实际响应进行断言操作",
+      "time" : {
+        "start" : 1617946315791,
+        "stop" : 1617946315792,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d88c432929ada2e0",
+        "name" : "测试结果",
+        "source" : "d88c432929ada2e0.txt",
+        "type" : "text/plain",
+        "size" : 4
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "603a72fb991952f2",
+      "name" : "stderr",
+      "source" : "603a72fb991952f2.txt",
+      "type" : "text/plain",
+      "size" : 4970
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 6
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-UVHS0AF"
+  }, {
+    "name" : "thread",
+    "value" : "10112-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_number",
+    "value" : "'case_003'"
+  }, {
+    "name" : "case_title",
+    "value" : "'get请求查询用户数据列表'"
+  }, {
+    "name" : "data",
+    "value" : "'{\"pagenum\": 1, \"pagesize\": \"12\"}'"
+  }, {
+    "name" : "dependent",
+    "value" : "'key={\"case_002\": [\"$.data.id\"],\"case_001\":[\"$.meta.msg\",\"$.meta.status\"]}'"
+  }, {
+    "name" : "expect",
+    "value" : "'{\"msg\": \"获取管理员列表成功\", \"status\": 200}'"
+  }, {
+    "name" : "file_path",
+    "value" : "''"
+  }, {
+    "name" : "file_var",
+    "value" : "''"
+  }, {
+    "name" : "is_token",
+    "value" : "'读'"
+  }, {
+    "name" : "method",
+    "value" : "'get'"
+  }, {
+    "name" : "parameters",
+    "value" : "''"
+  }, {
+    "name" : "parametric_key",
+    "value" : "'params'"
+  }, {
+    "name" : "path",
+    "value" : "'users'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a1753eb733a619e5.json",
+  "parameterValues" : [ "'case_003'", "'get请求查询用户数据列表'", "'{\"pagenum\": 1, \"pagesize\": \"12\"}'", "'key={\"case_002\": [\"$.data.id\"],\"case_001\":[\"$.meta.msg\",\"$.meta.status\"]}'", "'{\"msg\": \"获取管理员列表成功\", \"status\": 200}'", "''", "''", "'读'", "'get'", "''", "'params'", "'users'" ]
+}

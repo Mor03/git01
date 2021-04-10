@@ -1,0 +1,371 @@
+{
+  "8e56dbf697f254e2f117cd7340a113f1" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "cc4790490ae2aacb",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '用户ID...'status': 400} == {'msg': '设置状态...'status': 200}\n  Differing items:\n  {'msg': '用户ID必须是数字'} != {'msg': '设置状态成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946316233,
+        "stop" : 1617946316272,
+        "duration" : 39
+      }
+    } ]
+  },
+  "86c4907a2beff8c7c1d0a4a456a9ba5e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "97dea4eb4d55de48",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946317024,
+        "stop" : 1617946317066,
+        "duration" : 42
+      }
+    } ]
+  },
+  "cce0f338ff5d6f59a8a1cc65cb7fbd8a" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e1eea52857a8df30",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\n  Differing items:\n  {'msg': '用户名已存在'} != {'msg': '创建成功'}\n  {'status': 400} != {'status': 201}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946315954,
+        "stop" : 1617946315997,
+        "duration" : 43
+      }
+    } ]
+  },
+  "e1ef4cedcaf30aab8203d5fbd68a7877" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "18a2f9949913e0e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946315487,
+        "stop" : 1617946315644,
+        "duration" : 157
+      }
+    } ]
+  },
+  "2aed6383ad58d5a867c775b368706c6f" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "936bd9dc4c8c3e37",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '该用户没...'status': 400} == {'msg': '登录成功', 'status': 200}\n  Differing items:\n  {'msg': '该用户没有权限登录'} != {'msg': '登录成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946316817,
+        "stop" : 1617946316857,
+        "duration" : 40
+      }
+    } ]
+  },
+  "3b323432e32b05885770e0774d99fdf8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a1753eb733a619e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946315652,
+        "stop" : 1617946315793,
+        "duration" : 141
+      }
+    } ]
+  },
+  "a61f52afbea94c94eb0c7e620fe14df2" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1a41b03c88537016",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '用户ID...'status': 400} == {'msg': '获取成功', 'status': 200}\n  Differing items:\n  {'msg': '用户ID必须是数字'} != {'msg': '获取成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946316181,
+        "stop" : 1617946316220,
+        "duration" : 39
+      }
+    } ]
+  },
+  "f6e63c351a19663790eaf39658f5caf2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "eb431d85ba00608",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946316721,
+        "stop" : 1617946316761,
+        "duration" : 40
+      }
+    } ]
+  },
+  "d0d7e95c4aed45a6ed23be51f38a8ce4" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "73b370ac513f4eb9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '用户ID...'status': 400} == {'msg': '设置状态...'status': 200}\n  Differing items:\n  {'msg': '用户ID必须是数字'} != {'msg': '设置状态成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946316120,
+        "stop" : 1617946316158,
+        "duration" : 38
+      }
+    } ]
+  },
+  "ef9a3f3e8b6ad58631f0677cc4731eb8" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c360f9a1ae3d30da",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '该用户没...'status': 400} == {'msg': '登录成功', 'status': 200}\n  Differing items:\n  {'msg': '该用户没有权限登录'} != {'msg': '登录成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946317074,
+        "stop" : 1617946317113,
+        "duration" : 39
+      }
+    } ]
+  },
+  "8bc088bd76dcb20222a36cc0e2e2d3e8" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e38ad8fc2eb8ac12",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': 'ID必须...'status': 400} == {'msg': '删除成功', 'status': 200}\n  Differing items:\n  {'msg': 'ID必须是数字'} != {'msg': '删除成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946316284,
+        "stop" : 1617946316320,
+        "duration" : 36
+      }
+    } ]
+  },
+  "a1b9f85f2a5ba8dcc39d639573d5fa17" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2555cd6c5839fb81",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\n  Differing items:\n  {'msg': '用户名已存在'} != {'msg': '创建成功'}\n  {'status': 400} != {'status': 201}\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1617946316507,
+        "stop" : 1617946316543,
+        "duration" : 36
+      }
+    } ]
+  },
+  "ae48f138266eb79c2bc230676a338379" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7f269393f85f7503",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946316877,
+        "stop" : 1617946317016,
+        "duration" : 139
+      }
+    } ]
+  },
+  "428e8a2e1bbc0f7aedb6b37c3918ea8e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ff628580144c80b9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946315801,
+        "stop" : 1617946315946,
+        "duration" : 145
+      }
+    } ]
+  },
+  "85d8d71b50041c7b64ff34f9659f11ec" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ed7140d44dbe6cae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946315406,
+        "stop" : 1617946315478,
+        "duration" : 72
+      }
+    } ]
+  },
+  "cfa12783e62c86be94cb9740c22cb2d0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "30f9da7d12c20e6b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946316768,
+        "stop" : 1617946316810,
+        "duration" : 42
+      }
+    } ]
+  },
+  "fd8b4b352f70c5d845b2f43bf845d9d3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "555498514a92035",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946316333,
+        "stop" : 1617946316500,
+        "duration" : 167
+      }
+    } ]
+  },
+  "41702d3d16ec9b5aa4e4988ff19065ee" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7fec272ae6ca193d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946317126,
+        "stop" : 1617946317286,
+        "duration" : 160
+      }
+    } ]
+  },
+  "78fa396e3a02b5b75c2324c7ee1c1cd2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7b7592351074b4e1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1617946316557,
+        "stop" : 1617946316714,
+        "duration" : 157
+      }
+    } ]
+  }
+}

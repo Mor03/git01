@@ -1,0 +1,256 @@
+{
+  "uid" : "2555cd6c5839fb81",
+  "name" : "添加用户2正常接口数据",
+  "fullName" : "test.test_api.TestApiAuto#test_main",
+  "historyId" : "a1b9f85f2a5ba8dcc39d639573d5fa17",
+  "time" : {
+    "start" : 1617946316507,
+    "stop" : 1617946316543,
+    "duration" : 36
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\n  Differing items:\n  {'msg': '用户名已存在'} != {'msg': '创建成功'}\n  {'status': 400} != {'status': 201}\n  Use -v to get the full diff",
+  "statusTrace" : "self = <test.test_api.TestApiAuto object at 0x00000230DACD0670>\ncase_number = 'case_010', case_title = '添加用户2正常接口数据', path = 'users'\nis_token = '读', method = 'post', parametric_key = 'data', file_var = ''\nfile_path = '', parameters = '', dependent = ''\ndata = {'password': '123456', 'username': 'mor01'}\nexpect = {'msg': '创建成功', 'status': 201}\n\n    @pytest.mark.parametrize('case_number,case_title,path,is_token,method,parametric_key,file_var,'\n                             'file_path, parameters, dependent,data,expect', data_list)\n    def test_main(self, case_number, case_title, path, is_token, method, parametric_key, file_var,\n                  file_path, parameters, dependent, data, expect):\n    \n        # 感谢：https://www.cnblogs.com/yoyoketang/p/13386145.html，提供动态添加标题的实例代码\n        # 动态添加标题\n        allure.dynamic.title(case_title)\n    \n        logger.debug(f'⬇️⬇️⬇️...执行用例编号:{case_number}...⬇️⬇️⬇️️')\n        with allure.step(\"处理相关数据依赖，header\"):\n    \n            # return data(原始请求数据), header, parameters_path_url（解析依赖的数据）\n            data, header, parameters_path_url = treat_data.treating_data(is_token, parameters, dependent, data,\n                                                                         save_response_dict)\n            #allure报告还支持显示许多不同类型的附件，可以补充测试结果\n            allure.attach(json.dumps(header, ensure_ascii=False, indent=4), \"请求头\", allure.attachment_type.TEXT)\n            allure.attach(json.dumps(data, ensure_ascii=False, indent=4), \"请求数据\", allure.attachment_type.TEXT)\n    \n        with allure.step(\"发送请求，取得响应结果的json串\"):\n            allure.attach(json.dumps(base_url + path + parameters_path_url, ensure_ascii=False, indent=4), \"最终请求地址\",\n                          allure.attachment_type.TEXT)\n            res = br.base_requests(method=method, url=base_url + path + parameters_path_url,\n                                   parametric_key=parametric_key, file_var=file_var, file_path=file_path,\n                                   data=data, header=header)\n            allure.attach(json.dumps(res, ensure_ascii=False, indent=4), \"实际响应\", allure.attachment_type.TEXT)\n    \n        with allure.step(\"将响应结果的内容写入实际响应字典中\"):\n            save_response_dict.save_actual_response(case_key=case_number, case_response=res)\n            allure.attach(json.dumps(save_response_dict.actual_response, ensure_ascii=False, indent=4), \"实际响应字典\",\n                          allure.attachment_type.TEXT)\n    \n            # 写token的接口必须是要正确无误能返回token的，前面先提取再判断\n            if is_token == '写':\n                with allure.step(\"从登录后的响应中提取token到header中\"):\n                    # $.data.token\n                    treat_data.token_header['Authorization'] = jsonpath.jsonpath(res, token_reg)[0]  #字典\n    \n        with allure.step(\"根据配置文件的提取响应规则提取实际数据\"):\n            really = jsonpath.jsonpath(res, res_reg)[0]\n            allure.attach(json.dumps(really, ensure_ascii=False, indent=4), \"提取用于断言的实际响应部分数据\",\n                          allure.attachment_type.TEXT)\n    \n        with allure.step(\"处理读取出来的预期结果响应\"):\n            # 处理预期结果数据中使用True/False/None导致的无法转换bug\n            if 'None' in expect:\n                expect = expect.replace('None', 'null')\n            if 'True' in expect:\n                expect = expect.replace('True', 'true')\n            if 'False' in expect:\n                expect = expect.replace('False', 'false')\n            expect = json.loads(expect)\n            allure.attach(json.dumps(expect, ensure_ascii=False, indent=4), \"预期响应\", allure.attachment_type.TEXT)\n    \n        with allure.step(\"预期结果与实际响应进行断言操作\"):\n            logger.info(f'完整的json响应: {res}\\n需要校验的数据字典: {really} 预期校验的数据字典: {expect} \\n测试结果: {really == expect}')\n            logger.debug(f'⬆⬆⬆...用例编号:{case_number},执行完毕,日志查看...⬆⬆⬆\\n\\n️')\n            allure.attach(json.dumps(really == expect, ensure_ascii=False, indent=4), \"测试结果\",\n                          allure.attachment_type.TEXT)\n>           assert really == expect\nE           AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\nE             Differing items:\nE             {'msg': '用户名已存在'} != {'msg': '创建成功'}\nE             {'status': 400} != {'status': 201}\nE             Use -v to get the full diff\n\ntest_api.py:155: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\n  Differing items:\n  {'msg': '用户名已存在'} != {'msg': '创建成功'}\n  {'status': 400} != {'status': 201}\n  Use -v to get the full diff",
+    "statusTrace" : "self = <test.test_api.TestApiAuto object at 0x00000230DACD0670>\ncase_number = 'case_010', case_title = '添加用户2正常接口数据', path = 'users'\nis_token = '读', method = 'post', parametric_key = 'data', file_var = ''\nfile_path = '', parameters = '', dependent = ''\ndata = {'password': '123456', 'username': 'mor01'}\nexpect = {'msg': '创建成功', 'status': 201}\n\n    @pytest.mark.parametrize('case_number,case_title,path,is_token,method,parametric_key,file_var,'\n                             'file_path, parameters, dependent,data,expect', data_list)\n    def test_main(self, case_number, case_title, path, is_token, method, parametric_key, file_var,\n                  file_path, parameters, dependent, data, expect):\n    \n        # 感谢：https://www.cnblogs.com/yoyoketang/p/13386145.html，提供动态添加标题的实例代码\n        # 动态添加标题\n        allure.dynamic.title(case_title)\n    \n        logger.debug(f'⬇️⬇️⬇️...执行用例编号:{case_number}...⬇️⬇️⬇️️')\n        with allure.step(\"处理相关数据依赖，header\"):\n    \n            # return data(原始请求数据), header, parameters_path_url（解析依赖的数据）\n            data, header, parameters_path_url = treat_data.treating_data(is_token, parameters, dependent, data,\n                                                                         save_response_dict)\n            #allure报告还支持显示许多不同类型的附件，可以补充测试结果\n            allure.attach(json.dumps(header, ensure_ascii=False, indent=4), \"请求头\", allure.attachment_type.TEXT)\n            allure.attach(json.dumps(data, ensure_ascii=False, indent=4), \"请求数据\", allure.attachment_type.TEXT)\n    \n        with allure.step(\"发送请求，取得响应结果的json串\"):\n            allure.attach(json.dumps(base_url + path + parameters_path_url, ensure_ascii=False, indent=4), \"最终请求地址\",\n                          allure.attachment_type.TEXT)\n            res = br.base_requests(method=method, url=base_url + path + parameters_path_url,\n                                   parametric_key=parametric_key, file_var=file_var, file_path=file_path,\n                                   data=data, header=header)\n            allure.attach(json.dumps(res, ensure_ascii=False, indent=4), \"实际响应\", allure.attachment_type.TEXT)\n    \n        with allure.step(\"将响应结果的内容写入实际响应字典中\"):\n            save_response_dict.save_actual_response(case_key=case_number, case_response=res)\n            allure.attach(json.dumps(save_response_dict.actual_response, ensure_ascii=False, indent=4), \"实际响应字典\",\n                          allure.attachment_type.TEXT)\n    \n            # 写token的接口必须是要正确无误能返回token的，前面先提取再判断\n            if is_token == '写':\n                with allure.step(\"从登录后的响应中提取token到header中\"):\n                    # $.data.token\n                    treat_data.token_header['Authorization'] = jsonpath.jsonpath(res, token_reg)[0]  #字典\n    \n        with allure.step(\"根据配置文件的提取响应规则提取实际数据\"):\n            really = jsonpath.jsonpath(res, res_reg)[0]\n            allure.attach(json.dumps(really, ensure_ascii=False, indent=4), \"提取用于断言的实际响应部分数据\",\n                          allure.attachment_type.TEXT)\n    \n        with allure.step(\"处理读取出来的预期结果响应\"):\n            # 处理预期结果数据中使用True/False/None导致的无法转换bug\n            if 'None' in expect:\n                expect = expect.replace('None', 'null')\n            if 'True' in expect:\n                expect = expect.replace('True', 'true')\n            if 'False' in expect:\n                expect = expect.replace('False', 'false')\n            expect = json.loads(expect)\n            allure.attach(json.dumps(expect, ensure_ascii=False, indent=4), \"预期响应\", allure.attachment_type.TEXT)\n    \n        with allure.step(\"预期结果与实际响应进行断言操作\"):\n            logger.info(f'完整的json响应: {res}\\n需要校验的数据字典: {really} 预期校验的数据字典: {expect} \\n测试结果: {really == expect}')\n            logger.debug(f'⬆⬆⬆...用例编号:{case_number},执行完毕,日志查看...⬆⬆⬆\\n\\n️')\n            allure.attach(json.dumps(really == expect, ensure_ascii=False, indent=4), \"测试结果\",\n                          allure.attachment_type.TEXT)\n>           assert really == expect\nE           AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\nE             Differing items:\nE             {'msg': '用户名已存在'} != {'msg': '创建成功'}\nE             {'status': 400} != {'status': 201}\nE             Use -v to get the full diff\n\ntest_api.py:155: AssertionError",
+    "steps" : [ {
+      "name" : "处理相关数据依赖，header",
+      "time" : {
+        "start" : 1617946316508,
+        "stop" : 1617946316509,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "991cc0f87d2f70ac",
+        "name" : "请求头",
+        "source" : "991cc0f87d2f70ac.txt",
+        "type" : "text/plain",
+        "size" : 186
+      }, {
+        "uid" : "b2a8a124b52c3357",
+        "name" : "请求数据",
+        "source" : "b2a8a124b52c3357.txt",
+        "type" : "text/plain",
+        "size" : 53
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "发送请求，取得响应结果的json串",
+      "time" : {
+        "start" : 1617946316509,
+        "stop" : 1617946316540,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "2148c6594130eac",
+        "name" : "最终请求地址",
+        "source" : "2148c6594130eac.txt",
+        "type" : "text/plain",
+        "size" : 49
+      }, {
+        "uid" : "b0905e9a04b362fe",
+        "name" : "实际响应",
+        "source" : "b0905e9a04b362fe.txt",
+        "type" : "text/plain",
+        "size" : 100
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "将响应结果的内容写入实际响应字典中",
+      "time" : {
+        "start" : 1617946316540,
+        "stop" : 1617946316542,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "50c263f979e27c9d",
+        "name" : "实际响应字典",
+        "source" : "50c263f979e27c9d.txt",
+        "type" : "text/plain",
+        "size" : 8055
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "根据配置文件的提取响应规则提取实际数据",
+      "time" : {
+        "start" : 1617946316542,
+        "stop" : 1617946316542,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "9b13a33515d4badd",
+        "name" : "提取用于断言的实际响应部分数据",
+        "source" : "9b13a33515d4badd.txt",
+        "type" : "text/plain",
+        "size" : 54
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "处理读取出来的预期结果响应",
+      "time" : {
+        "start" : 1617946316542,
+        "stop" : 1617946316542,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5a166f4a6fd95593",
+        "name" : "预期响应",
+        "source" : "5a166f4a6fd95593.txt",
+        "type" : "text/plain",
+        "size" : 48
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "预期结果与实际响应进行断言操作",
+      "time" : {
+        "start" : 1617946316542,
+        "stop" : 1617946316543,
+        "duration" : 1
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\n  Differing items:\n  {'msg': '用户名已存在'} != {'msg': '创建成功'}\n  {'status': 400} != {'status': 201}\n  Use -v to get the full diff\n",
+      "statusTrace" : "  File \"D:\\zy7y-apiAutoTest-version1.0\\apiAutoTest\\test\\test_api.py\", line 155, in test_main\n    assert really == expect\n",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "45ef6f9b434f6d8",
+        "name" : "测试结果",
+        "source" : "45ef6f9b434f6d8.txt",
+        "type" : "text/plain",
+        "size" : 5
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "23f724891e579811",
+      "name" : "stderr",
+      "source" : "23f724891e579811.txt",
+      "type" : "text/plain",
+      "size" : 6248
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 6
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-UVHS0AF"
+  }, {
+    "name" : "thread",
+    "value" : "10112-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_number",
+    "value" : "'case_010'"
+  }, {
+    "name" : "case_title",
+    "value" : "'添加用户2正常接口数据'"
+  }, {
+    "name" : "data",
+    "value" : "'{\"username\": \"mor01\",\"password\": \"123456\"}'"
+  }, {
+    "name" : "dependent",
+    "value" : "''"
+  }, {
+    "name" : "expect",
+    "value" : "'{\"msg\":\"创建成功\",\"status\":201}'"
+  }, {
+    "name" : "file_path",
+    "value" : "''"
+  }, {
+    "name" : "file_var",
+    "value" : "''"
+  }, {
+    "name" : "is_token",
+    "value" : "'读'"
+  }, {
+    "name" : "method",
+    "value" : "'post'"
+  }, {
+    "name" : "parameters",
+    "value" : "''"
+  }, {
+    "name" : "parametric_key",
+    "value" : "'data'"
+  }, {
+    "name" : "path",
+    "value" : "'users'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2555cd6c5839fb81.json",
+  "parameterValues" : [ "'case_010'", "'添加用户2正常接口数据'", "'{\"username\": \"mor01\",\"password\": \"123456\"}'", "''", "'{\"msg\":\"创建成功\",\"status\":201}'", "''", "''", "'读'", "'post'", "''", "'data'", "'users'" ]
+}

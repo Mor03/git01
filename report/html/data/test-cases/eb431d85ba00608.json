@@ -1,0 +1,246 @@
+{
+  "uid" : "eb431d85ba00608",
+  "name" : "修改用户状态接口",
+  "fullName" : "test.test_api.TestApiAuto#test_main",
+  "historyId" : "f6e63c351a19663790eaf39658f5caf2",
+  "time" : {
+    "start" : 1617946316721,
+    "stop" : 1617946316761,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理相关数据依赖，header",
+      "time" : {
+        "start" : 1617946316721,
+        "stop" : 1617946316723,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "314ae1640bb9ba9e",
+        "name" : "请求头",
+        "source" : "314ae1640bb9ba9e.txt",
+        "type" : "text/plain",
+        "size" : 186
+      }, {
+        "uid" : "a8e0c640e6394e03",
+        "name" : "请求数据",
+        "source" : "a8e0c640e6394e03.txt",
+        "type" : "text/plain",
+        "size" : 4
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "发送请求，取得响应结果的json串",
+      "time" : {
+        "start" : 1617946316723,
+        "stop" : 1617946316758,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "635e4fc04f2c36e7",
+        "name" : "最终请求地址",
+        "source" : "635e4fc04f2c36e7.txt",
+        "type" : "text/plain",
+        "size" : 62
+      }, {
+        "uid" : "f7344b4dcc68df5a",
+        "name" : "实际响应",
+        "source" : "f7344b4dcc68df5a.txt",
+        "type" : "text/plain",
+        "size" : 243
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "将响应结果的内容写入实际响应字典中",
+      "time" : {
+        "start" : 1617946316758,
+        "stop" : 1617946316759,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "182c9c78fcf7f731",
+        "name" : "实际响应字典",
+        "source" : "182c9c78fcf7f731.txt",
+        "type" : "text/plain",
+        "size" : 10559
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "根据配置文件的提取响应规则提取实际数据",
+      "time" : {
+        "start" : 1617946316759,
+        "stop" : 1617946316759,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "a9124866471def3f",
+        "name" : "提取用于断言的实际响应部分数据",
+        "source" : "a9124866471def3f.txt",
+        "type" : "text/plain",
+        "size" : 54
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "处理读取出来的预期结果响应",
+      "time" : {
+        "start" : 1617946316759,
+        "stop" : 1617946316760,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6f8afbf3b21bde44",
+        "name" : "预期响应",
+        "source" : "6f8afbf3b21bde44.txt",
+        "type" : "text/plain",
+        "size" : 54
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "预期结果与实际响应进行断言操作",
+      "time" : {
+        "start" : 1617946316760,
+        "stop" : 1617946316760,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "82a757e78eb0eab6",
+        "name" : "测试结果",
+        "source" : "82a757e78eb0eab6.txt",
+        "type" : "text/plain",
+        "size" : 4
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "4cada3f629dadb07",
+      "name" : "stderr",
+      "source" : "4cada3f629dadb07.txt",
+      "type" : "text/plain",
+      "size" : 8433
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 6
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-UVHS0AF"
+  }, {
+    "name" : "thread",
+    "value" : "10112-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_api"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_number",
+    "value" : "'case_012'"
+  }, {
+    "name" : "case_title",
+    "value" : "'修改用户状态接口'"
+  }, {
+    "name" : "data",
+    "value" : "''"
+  }, {
+    "name" : "dependent",
+    "value" : "''"
+  }, {
+    "name" : "expect",
+    "value" : "'{\"msg\": \"设置状态成功\", \"status\": 200}'"
+  }, {
+    "name" : "file_path",
+    "value" : "''"
+  }, {
+    "name" : "file_var",
+    "value" : "''"
+  }, {
+    "name" : "is_token",
+    "value" : "'读'"
+  }, {
+    "name" : "method",
+    "value" : "'put'"
+  }, {
+    "name" : "parameters",
+    "value" : "'/511/state/-1'"
+  }, {
+    "name" : "parametric_key",
+    "value" : "'data'"
+  }, {
+    "name" : "path",
+    "value" : "'users'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "eb431d85ba00608.json",
+  "parameterValues" : [ "'case_012'", "'修改用户状态接口'", "''", "''", "'{\"msg\": \"设置状态成功\", \"status\": 200}'", "''", "''", "'读'", "'put'", "'/511/state/-1'", "'data'", "'users'" ]
+}

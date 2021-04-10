@@ -1,0 +1,133 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert {'msg': '用户名已...'status': 400} == {'msg': '创建成功', 'status': 201}\n  Differing items:\n  {'msg': '用户名已存在'} != {'msg': '创建成功'}\n  {'status': 400} != {'status': 201}\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "添加用户正常接口数据",
+        "uid" : "e1eea52857a8df30",
+        "parentUid" : "13c580fa57db329a86ca900f590bf5ec",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946315954,
+          "stop" : 1617946315997,
+          "duration" : 43
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_005'", "'添加用户正常接口数据'", "'{\"username\": \"tester_01\",\"password\": \"123456\"}'", "''", "'{\"msg\":\"创建成功\",\"status\":201}'", "''", "''", "'读'", "'post'", "''", "'data'", "'users'" ]
+      }, {
+        "name" : "添加用户2正常接口数据",
+        "uid" : "2555cd6c5839fb81",
+        "parentUid" : "13c580fa57db329a86ca900f590bf5ec",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946316507,
+          "stop" : 1617946316543,
+          "duration" : 36
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_010'", "'添加用户2正常接口数据'", "'{\"username\": \"mor01\",\"password\": \"123456\"}'", "''", "'{\"msg\":\"创建成功\",\"status\":201}'", "''", "''", "'读'", "'post'", "''", "'data'", "'users'" ]
+      } ],
+      "uid" : "13c580fa57db329a86ca900f590bf5ec"
+    }, {
+      "name" : "AssertionError: assert {'msg': '用户ID...'status': 400} == {'msg': '设置状态...'status': 200}\n  Differing items:\n  {'msg': '用户ID必须是数字'} != {'msg': '设置状态成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "修改用户状态接口",
+        "uid" : "73b370ac513f4eb9",
+        "parentUid" : "9dc83b75313f9ce76c72a15132c669f8",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946316120,
+          "stop" : 1617946316158,
+          "duration" : 38
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_006'", "'修改用户状态接口'", "''", "''", "'{\"msg\": \"设置状态成功\", \"status\": 200}'", "''", "''", "'读'", "'put'", "'/{\"case_005\":\"$.data.id\"}/state/1'", "'data'", "'users'" ]
+      }, {
+        "name" : "修改用户状态为false",
+        "uid" : "cc4790490ae2aacb",
+        "parentUid" : "9dc83b75313f9ce76c72a15132c669f8",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946316233,
+          "stop" : 1617946316272,
+          "duration" : 39
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_007'", "'修改用户状态为false'", "''", "''", "'{\"msg\": \"设置状态成功\", \"status\": 200}'", "''", "''", "'读'", "'put'", "'/{\"case_005\":\"$.data.id\"}/state/1'", "'data'", "'users'" ]
+      } ],
+      "uid" : "9dc83b75313f9ce76c72a15132c669f8"
+    }, {
+      "name" : "AssertionError: assert {'msg': '用户ID...'status': 400} == {'msg': '获取成功', 'status': 200}\n  Differing items:\n  {'msg': '用户ID必须是数字'} != {'msg': '获取成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "查询用户信息",
+        "uid" : "1a41b03c88537016",
+        "parentUid" : "c289658cf92736da34bceeacb413c163",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946316181,
+          "stop" : 1617946316220,
+          "duration" : 39
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_006_1'", "'查询用户信息'", "''", "''", "' {\"msg\": \"获取成功\", \"status\": 200}'", "''", "''", "'读'", "'get'", "'/{\"case_005\":\"$.data.id\"}'", "'params'", "'users'" ]
+      } ],
+      "uid" : "c289658cf92736da34bceeacb413c163"
+    }, {
+      "name" : "AssertionError: assert {'msg': 'ID必须...'status': 400} == {'msg': '删除成功', 'status': 200}\n  Differing items:\n  {'msg': 'ID必须是数字'} != {'msg': '删除成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "删除用户zy7y",
+        "uid" : "e38ad8fc2eb8ac12",
+        "parentUid" : "472dc3ad3465b6a8ced8a314f4af4d41",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946316284,
+          "stop" : 1617946316320,
+          "duration" : 36
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_008'", "'删除用户zy7y'", "''", "''", "'{\"msg\": \"删除成功\", \"status\": 200}'", "''", "''", "'读'", "'delete'", "'/{\"case_003\":\"$.data.id\"}'", "'params'", "'users'" ]
+      } ],
+      "uid" : "472dc3ad3465b6a8ced8a314f4af4d41"
+    }, {
+      "name" : "AssertionError: assert {'msg': '该用户没...'status': 400} == {'msg': '登录成功', 'status': 200}\n  Differing items:\n  {'msg': '该用户没有权限登录'} != {'msg': '登录成功'}\n  {'status': 400} != {'status': 200}\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "post请求实现登录",
+        "uid" : "936bd9dc4c8c3e37",
+        "parentUid" : "a68f0111dbbc227e34c59b2a1b2c40ed",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946316817,
+          "stop" : 1617946316857,
+          "duration" : 40
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_014'", "'post请求实现登录'", "'{\"username\": \"mor01\", \"password\": \"123456\"}'", "''", "'{\"msg\": \"登录成功\",\"status\": 200}'", "''", "''", "'读'", "'post'", "''", "'data'", "'login'" ]
+      }, {
+        "name" : "post请求实现登录",
+        "uid" : "c360f9a1ae3d30da",
+        "parentUid" : "a68f0111dbbc227e34c59b2a1b2c40ed",
+        "status" : "failed",
+        "time" : {
+          "start" : 1617946317074,
+          "stop" : 1617946317113,
+          "duration" : 39
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'case_014'", "'post请求实现登录'", "'{\"username\": \"mor01\", \"password\": \"123456\"}'", "''", "'{\"msg\": \"登录成功\",\"status\": 200}'", "''", "''", "'读'", "'post'", "''", "'data'", "'login'" ]
+      } ],
+      "uid" : "a68f0111dbbc227e34c59b2a1b2c40ed"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}
